@@ -1,0 +1,25 @@
+name = "carmen-cookie-jar-api"
+main = "src/worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+# Cloudflare Cron triggers use UTC. These two times bracket 11:59 PM Eastern
+# across daylight-saving changes, and the Worker checks the local timezone.
+# The cleanup timer safely checks payment-link expiry every ten minutes.
+[triggers]
+crons = [ "59 3,4 * * 1", "*/10 * * * *" ]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "carmen-cookie-jar-db"
+database_id = "REPLACE_WITH_YOUR_CLOUDFLARE_D1_DATABASE_ID"
+
+[vars]
+# No path, only the website origin. Example: https://YOURNAME.github.io
+SITE_ORIGIN = "https://YOUR-GITHUB-USERNAME.github.io"
+# Exact public GitHub Pages URL with trailing slash.
+STOREFRONT_URL = "https://YOUR-GITHUB-USERNAME.github.io/carmen-cookie-jar/"
+# Your Square Location ID is not a secret.
+SQUARE_LOCATION_ID = "REPLACE_WITH_SQUARE_LOCATION_ID"
+# "sandbox" for testing; "production" for real payments after testing.
+SQUARE_ENVIRONMENT = "sandbox"

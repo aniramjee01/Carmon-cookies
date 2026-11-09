@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f9fb">
+  <meta name="description" content="Carmen Cookie Jar: small-batch, big-hearted cookies. Shop weekly and limited seasonal cookie drops.">
+  <title>Carmen Cookie Jar ✳ Fresh from the jar</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500,60,1;0,9..144,700,60,1;1,9..144,600,60,1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=4">
+  <script defer src="./config.js?v=4"></script>
+  <script defer src="./app.js?v=4"></script>
+</head>
+<body>
+  <div class="announcement"><span class="twinkle">✳</span><span>THE COOKIE JAR IS OPEN <span class="announcement-divider">✦</span> SMALL BATCHES, BIG LOVE</span><span class="twinkle">✳</span></div>
+  <header class="site-header" id="home">
+    <a href="#home" class="wordmark" aria-label="Carmen Cookie Jar home"><span class="mark">c<span>✳</span></span><span>Carmen <small>COOKIE JAR</small></span></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#cookies">The cookies</a><a href="#seasonal">Seasonal drops</a><a href="#our-story">Meet Carmen</a><a href="#faq">Questions</a></nav>
+    <button class="bag-button" id="cartButton" type="button">My jar <span id="cartCount">0</span><span aria-hidden="true">↗</span></button>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-copy" data-reveal>
+        <span class="micro-label"><span class="live-dot"></span> FRESHLY BAKED. ALWAYS A LITTLE SPECIAL.</span>
+        <h1 id="heroTitle">A little <em>joy</em><br>in every <span class="underline-word">bite<svg viewBox="0 0 260 32" aria-hidden="true"><path d="M5 24 Q132 -4 255 21"/></svg></span><span class="period">.</span></h1>
+        <p>Thick, soft-centered, made-with-love cookies. Pick your favorites, catch a seasonal drop, and make your day a little sweeter.</p>
+        <div class="hero-actions"><a href="#cookies" class="button button-dark">Shop the cookie drop <span>↗</span></a><a href="#our-story" class="underlined-link">Meet the baker ↗</a></div>
+        <div class="hero-footnote"><span class="avatar-cookie">🍪</span><span><b>12 of each flavor to start.</b><br><span class="muted">Limited batches, refreshed weekly.</span></span></div>
+      </div>
+      <div class="hero-visual" data-reveal>
+        <div class="hero-halo"></div><div class="orbit orbit-one" aria-hidden="true">✳</div><div class="orbit orbit-two" aria-hidden="true">✦</div>
+        <img src="./assets/chocolate-chip.jpeg" alt="Golden brown chocolate chip cookies, baked fresh" class="hero-cookie-img" fetchpriority="high">
+        <div class="photo-sticker sticker-top">tiny batches<br><strong>big feelings ♡</strong></div>
+        <div class="photo-sticker sticker-bottom">THE GOOD<br><strong>COOKIE CLUB!</strong></div>
+        <div class="image-caption">very soft. very good. very Carmen. <span>✳</span></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Our favorite flavors"><div class="ticker-track" aria-hidden="true">FRESH BAKES ✳ OREO ✳ CHOCOLATE CHIP ✳ S'MORES ✳ BISCOFF ✳ COOKIE JAR ✳ FRESH BAKES ✳ OREO ✳ CHOCOLATE CHIP ✳ S'MORES ✳ BISCOFF ✳ COOKIE JAR ✳ </div></div>
+
+    <section class="drop-bar" id="dropStatus" aria-live="polite"><span class="drop-icon">✦</span><div><b id="modeTitle">Preview mode</b><span id="modeDescription">Connect the secure order backend to unlock live stock and Square checkout.</span></div><span class="drop-pill" id="dropPill">PREVIEW</span></section>
+
+    <section class="section catalog" id="cookies">
+      <div class="section-heading" data-reveal><div><span class="eyebrow">01 / GOOD THINGS INSIDE</span><h2>Find your <em>favorite.</em></h2></div><p>A little crispy on the outside, a whole lot of happy on the inside. Meet this week's lineup.</p></div>
+      <div class="popular-callout" data-reveal><span class="big-star">✳</span><div><span class="eyebrow">THE PEOPLE HAVE SPOKEN</span><h3>The big three.</h3><p>Chocolate Chip <span>·</span> S'mores <span>·</span> Oreo</p></div><a href="#cookieGrid">Meet your favorites <span>↘</span></a></div>
+      <div class="product-grid" id="cookieGrid" aria-live="polite"></div>
+      <div class="box-builder" data-reveal><div><span class="eyebrow">MADE FOR SHARING (OR NOT)</span><h3>Better by the box.</h3><p>Mix and match your heart out. Bundle pricing applies automatically at checkout.</p></div><div class="bundle-list"><button type="button" class="bundle-choice" data-bundle="4"><strong>04</strong><span>Cookie box</span><b>$15</b><span class="bundle-arrow">↗</span></button><button type="button" class="bundle-choice" data-bundle="6"><strong>06</strong><span>Cookie box</span><b>$22</b><span class="bundle-arrow">↗</span></button><button type="button" class="bundle-choice" data-bundle="12"><strong>12</strong><span>Cookie box</span><b>$34</b><span class="bundle-arrow">↗</span></button></div></div>
+    </section>
+
+    <section id="seasonal" class="seasonal-section"><div class="seasonal-sprinkle" aria-hidden="true">✳ ✦ ✳ ✦</div><div class="seasonal-header" data-reveal><div><span class="eyebrow"><span class="seasonal-dot"></span> THE LIMITED EDITION COLLECTION</span><h2>Here for a <em>sweet minute.</em></h2><p>Some flavors just come around for a little while. Catch them while they're in the jar.</p></div><span class="seasonal-badge">SEASONAL<br>ONLY ✳</span></div><div class="seasonal-grid" id="seasonalGrid"></div><div class="seasonal-bottom"><span>✦</span> When the drop disappears, the memories don't. <span>✦</span></div></section>
+
+    <section class="magic-section" aria-label="Scroll for a cookie surprise"><span class="eyebrow">JUST ONE MORE?</span><h2>Happiness is <em>homemade.</em></h2><div class="animated-cookie" id="scrollCookie" aria-hidden="true"><svg viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg"><circle cx="105" cy="105" r="92" fill="#dba16d"/><circle cx="105" cy="105" r="82" fill="#e6b17b"/><g fill="#633927"><ellipse cx="58" cy="68" rx="17" ry="14" transform="rotate(-30 58 68)"/><ellipse cx="145" cy="71" rx="16" ry="20"/><ellipse cx="96" cy="114" rx="20" ry="14"/><ellipse cx="153" cy="139" rx="15" ry="16"/><ellipse cx="61" cy="151" rx="13" ry="17"/></g><g fill="#f8d1a2"><circle cx="98" cy="50" r="6"/><circle cx="125" cy="159" r="5"/><circle cx="53" cy="108" r="5"/></g></svg></div><p>Go on. Add another cookie. ♡</p></section>
+
+    <section class="section how-section"><div class="section-heading" data-reveal><div><span class="eyebrow">02 / EASY AS 1, 2, 3</span><h2>Your cookies, <em>your way.</em></h2></div></div><div class="step-grid"><article data-reveal><span class="step-number">01</span><span class="step-emoji">♡</span><h3>Pick your favorites</h3><p>Build your own mix or pick a cookie box. Your jar, your rules.</p></article><article data-reveal><span class="step-number">02</span><span class="step-emoji">◷</span><h3>Choose your moment</h3><p>Thursday and Friday after school, or a cozy Saturday pickup or delivery.</p></article><article data-reveal><span class="step-number">03</span><span class="step-emoji">✳</span><h3>Get your cookie fix</h3><p>Pay securely through Square when checkout is connected, then Carmen gets baking.</p></article></div></section>
+
+    <section class="story-section" id="our-story"><div class="story-image"><img src="./assets/snickerdoodle-detail.jpeg" alt="Snickerdoodle cupcake cookie with a swirl of frosting" loading="lazy"><span class="story-postit">made with love<br>and a little flour ♡</span></div><div class="story-copy" data-reveal><span class="eyebrow">03 / BEHIND THE COOKIE JAR</span><h2>Hi, I'm <em>Carmen!</em></h2><p class="story-quote">“I'm a high-school student who loves baking and wants to turn my passion for cookies into my own business.”</p><p>Every cookie is a small step toward my baking dream. Thank you for being part of it.</p><a class="button button-dark" href="sms:+14638672562">Text Carmen <span>↗</span></a></div></section>
+
+    <section class="section faq-section" id="faq"><div class="section-heading" data-reveal><div><span class="eyebrow">04 / A FEW SWEET DETAILS</span><h2>Good to <em>know.</em></h2></div></div><div class="faq-list"><details><summary>When is pickup or delivery available? <span>+</span></summary><p>Thursday and Friday after 4:30 PM, and Saturday 10 AM–6 PM. All requests must be confirmed by Carmen. Scheduling rules can be edited in <code>config.js</code> and in the backend.</p></details><details><summary>How does the limited weekly drop work? <span>+</span></summary><p>Each flavor starts with 12. When live inventory is connected, a checkout reserves treats, and each Sunday at 11:59 PM Eastern the unsold balance rolls forward with 12 more. A paid order is never added back automatically.</p></details><details><summary>What ingredients do the cookies contain? <span>+</span></summary><p>The shared ingredient list includes flour, sugar, brown sugar, vanilla, Oreos, Biscoff, graham crackers, chocolate chips, and marshmallows. Exact recipe and allergen information varies by flavor and must be checked with Carmen.</p></details><details><summary>Are the cookies allergy-friendly? <span>+</span></summary><p>No allergy-free claim is made. Possible allergens include wheat, dairy, egg, and soy. These are made in a shared home kitchen. Always confirm with Carmen before purchasing if you have allergies.</p></details><details><summary>How do I pay? <span>+</span></summary><p>Connected checkout redirects to Square's secure payment page. Availability of Apple Pay and other methods depends on the buyer's device and Carmen's Square settings. For Zelle or another method, text Carmen at 463-867-2562.</p></details></div></section>
+    <section class="last-call"><span class="last-star one">✳</span><span class="last-star two">✳</span><span class="eyebrow">YOUR SWEET MOMENT AWAITS</span><h2>Let's get <em>cookie.</em></h2><a class="button button-white" href="#cookies">Shop the drop ↗</a></section>
+  </main>
+  <footer class="footer"><div><h2>Carmen <em>Cookie Jar.</em></h2><p>Small-batch cookies made on my schedule, available on yours.</p></div><div class="footer-nav"><a href="#cookies">The cookies</a><a href="#seasonal">Seasonal drops</a><a href="sms:+14638672562">Text 463-867-2562</a><a href="./admin.html">Owner login</a></div><small>© <span id="year"></span> Carmen Cookie Jar. Baked with ♡</small></footer>
+
+  <div id="overlay" class="overlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Your cookie jar" aria-modal="true" aria-hidden="true"><div class="drawer-top"><div><span class="eyebrow">THE SWEET STUFF</span><h2>Your jar <em>♡</em></h2></div><button type="button" class="circle-button" id="closeCart" aria-label="Close cart">×</button></div><div class="cart-items" id="cartItems"></div><div class="drawer-bottom"><div class="cart-total" id="cartSummary"></div><button type="button" class="button button-dark full" id="checkoutButton">Checkout / request order →</button><p class="mini-muted" id="cartHint">Stock is reserved only after the secure checkout starts.</p></div></aside>
+
+  <div id="checkoutModal" class="checkout-modal" role="dialog" aria-label="Cookie checkout" aria-modal="true" hidden><div class="checkout-card"><button type="button" class="circle-button close-checkout" id="closeCheckout" aria-label="Close checkout">×</button><span class="eyebrow">ALMOST COOKIE TIME</span><h2>Let's make it <em>official.</em></h2><p class="checkout-intro" id="checkoutIntro">Fill in your details for pickup or delivery.</p><form id="orderForm"><div class="form-grid"><label>Your name<input name="name" required maxlength="100" autocomplete="name" placeholder="Name"></label><label>Phone number<input name="phone" required maxlength="32" type="tel" autocomplete="tel" placeholder="(463) 555-0123"></label></div><label>Email (for updates)<input name="email" type="email" autocomplete="email" maxlength="160" placeholder="you@example.com"></label><div class="fulfillment-options"><label><input type="radio" name="type" value="pickup" checked><span>✳ Pickup</span></label><label><input type="radio" name="type" value="delivery"><span>↗ Local delivery +$4</span></label></div><label id="addressWrap" hidden>Delivery address<input name="address" maxlength="240" autocomplete="street-address" placeholder="Street, city, ZIP"></label><div class="form-grid"><label>Choose a day<select id="pickupDay" name="day" required></select></label><label>Choose a time<select id="pickupTime" name="time" required></select></label></div><label>Notes / allergies<textarea name="notes" rows="3" maxlength="500" placeholder="Any notes for Carmen?"></textarea></label><div class="checkout-total" id="checkoutTotal"></div><p class="allergy-warning">Important: confirm ingredient and allergy details with Carmen before purchasing. Orders are confirmed only after payment and Carmen's acceptance.</p><button type="submit" id="submitOrder" class="button button-dark full">Continue to secure Square checkout ↗</button><p class="mini-muted" id="paymentHelper">No card details are collected on this website.</p></form><button type="button" class="text-order" id="textOrder">Prefer Zelle or another way? Text Carmen ↗</button></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "folders": [
+    { "path": ".", "name": "Carmen Cookie Jar — all files" }
+  ],
+  "settings": {
+    "liveServer.settings.root": "/site",
+    "liveServer.settings.port": 5500
+  }
+}

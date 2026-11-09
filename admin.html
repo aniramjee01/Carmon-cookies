@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#f2f8fc">
+  <title>Owner Studio · Carmen Cookie Jar</title>
+  <link rel="stylesheet" href="./styles.css?v=4">
+  <style>
+    .admin-body{background:#f4f9fc;min-height:100vh}.admin-shell{max-width:1100px;padding:40px 25px 100px;margin:auto}
+    .admin-top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:35px}
+    .admin-top h1{font:700 clamp(42px,6vw,75px) var(--display);letter-spacing:-.07em;margin:12px 0}.admin-top a{font-size:13px;font-weight:800;text-decoration:underline}
+    .admin-panel{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;margin:20px 0;box-shadow:var(--shadow)}
+    .admin-panel h2{font:700 29px var(--display);letter-spacing:-.05em;margin:0 0 18px}
+    .admin-panel p{font-size:13px;line-height:1.7;color:var(--muted)}
+    .admin-login{max-width:620px;margin:0 auto}.admin-login input{width:100%;padding:14px;border:1px solid var(--line);border-radius:12px;margin:10px 0}
+    .admin-login .button{margin-top:14px}.admin-toolbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:15px;align-items:center}
+    .admin-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+    .admin-product{background:#fff;border:1px solid var(--line);padding:16px;border-radius:18px;display:grid;gap:10px}
+    .admin-product img{width:100%;aspect-ratio:1.6;object-fit:cover;border-radius:12px}
+    .admin-product strong{font-size:14px}.admin-product label{font-size:12px;display:flex;align-items:center;gap:10px}
+    .admin-product input[type=number]{width:85px;border:1px solid #ddd;padding:9px;border-radius:8px}
+    .admin-product button,.order-row button{background:var(--cocoa);color:#fff;border:0;padding:10px 13px;border-radius:9px;font-size:12px;font-weight:700}
+    .order-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:20px 0}
+    .order-row strong{font-size:13px}.order-row small{display:block;color:var(--muted);font-size:11px;margin-top:6px;line-height:1.7}
+    .order-row select{padding:10px;border:1px solid var(--line);border-radius:8px;max-width:145px}
+    .admin-message{background:#e6f5fb;border-radius:13px;padding:14px;margin-top:15px;font-size:12px}
+    @media(max-width:750px){.admin-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:480px){.admin-grid{grid-template-columns:1fr}.admin-shell{padding:25px 15px}.admin-panel{padding:18px}}
+  </style>
+  <script defer src="./config.js?v=4"></script><script defer src="./admin.js?v=4"></script>
+</head>
+<body class="admin-body">
+  <div class="announcement">✳ CARMEN COOKIE JAR · PRIVATE OWNER STUDIO ✳</div>
+  <main class="admin-shell">
+    <div class="admin-top"><div><span class="eyebrow">BAKED WITH LOVE. MANAGED WITH CARE.</span><h1>Owner <em>studio.</em></h1></div><a href="./index.html">↖ Back to shop</a></div>
+    <div id="ownerLogin" class="admin-panel admin-login"><h2>Unlock the jar.</h2><p>Paste your private <strong>ADMIN_KEY</strong> here. It is sent to the backend only and isn't saved in your browser. Keep it private.</p><form id="loginForm"><label for="ownerKey">Private owner key</label><input type="password" id="ownerKey" required autocomplete="off" placeholder="Enter your private owner key"><button class="button button-dark full">Sign in →</button></form><div id="loginMessage" class="admin-message" role="status">This requires the deployed backend and a configured API URL in <code>config.js</code>.</div></div>
+    <div id="ownerDashboard" hidden>
+      <div class="admin-panel"><div class="admin-toolbar"><div><h2>The weekly jar ✳</h2><p id="resetDetails">Stock refreshes every Sunday at 11:59 PM Eastern. Unsold treats carry over, then 12 are added to each flavor.</p></div><button class="button button-dark" id="refreshOwner">Refresh ↻</button></div></div>
+      <div class="admin-panel"><h2>Flavor inventory</h2><p>Change stock for any flavor, or hide/show limited seasonal cookies. Changes affect the live storefront.</p><div class="admin-grid" id="ownerProducts"></div><p><button class="button button-dark" id="manualAdd">Add +12 to every flavor now</button> <span style="font-size:11px;color:#b55a5a">Use carefully—this is in addition to the automatic weekly refresh.</span></p></div>
+      <div class="admin-panel"><h2>Latest orders</h2><p>Pending = customer is on the Square payment page. Paid = Square webhook verified payment. Only paid orders should be baked. To refund an order, use Square Dashboard first.</p><div id="ownerOrders"></div></div>
+      <button class="button button-dark" id="logoutOwner">Log out</button><div id="ownerMessage" class="admin-message" role="status">Ready.</div>
+    </div>
+  </main>
+</body>
+</html>
